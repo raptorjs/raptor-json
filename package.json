@@ -1,27 +1,27 @@
 {
-  "name": "raptor-json",
-  "version": "0.2.0-beta",
-  "description": "Utility functions for working with JSON",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/raptorjs3/raptor-json.git"
-  },
-  "scripts": {
-    "test": "node_modules/.bin/mocha --ui bdd --reporter spec ./test"
-  },
-  "author": "Patrick Steele-Idem <pnidem@gmail.com>",
-  "maintainers": "Patrick Steele-Idem <pnidem@gmail.com>",
-  "dependencies": {
-    "raptor-strings": "^0.2.0-beta"
-  },
-  "devDependencies": {
-    "mocha": "~1.15.1",
-    "chai": "~1.8.1"
-  },
-  "license": "Apache License v2.0",
-  "bin": {},
-  "main": "index.js",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  }
+    "name": "raptor-json",
+    "description": "Utility functions for working with JSON",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/raptorjs3/raptor-json.git"
+    },
+    "scripts": {
+        "test": "node_modules/.bin/mocha --ui bdd --reporter spec ./test"
+    },
+    "author": "Patrick Steele-Idem <pnidem@gmail.com>",
+    "maintainers": "Patrick Steele-Idem <pnidem@gmail.com>",
+    "dependencies": {
+        "raptor-strings": "^0.2.0-beta"
+    },
+    "devDependencies": {
+        "mocha": "~1.15.1",
+        "chai": "~1.8.1"
+    },
+    "license": "Apache License v2.0",
+    "bin": {},
+    "main": "index.js",
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    },
+    "version": "0.2.1-beta"
 }
