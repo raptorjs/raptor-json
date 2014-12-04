@@ -90,6 +90,18 @@ function stringify(o, options) {
 
         var constr = o.constructor, i, len;
 
+        if (typeof o.toJSON === 'function') {
+            if (constr !== Date) { // Dates are handled later
+                o = o.toJSON();
+                if (o == null) {
+                    append(NULL);
+                    return;
+                }
+                
+                constr = o.constructor;
+            }
+        }
+
         if (o === true || o === false || constr === Boolean) {
             append(o.toString());
         } else if (constr === ARRAY) {
@@ -109,8 +121,7 @@ function stringify(o, options) {
             append(o.getTime());
         } else {
             var type = typeof o;
-            switch(type)
-            {
+            switch(type) {
                 case 'string':
                     append(encodeString(o));
                     break;
