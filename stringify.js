@@ -46,19 +46,6 @@ var REPLACE_CHARS = {
     '\\': '\\\\'
 };
 
-function _zeroPad(v) {
-    return v < 10 ? '0' + v : v;
-}
- function encodeDate(d) {
-
-    return d.getUTCFullYear()            + '-' +
-           _zeroPad(d.getUTCMonth() + 1) + '-' +
-           _zeroPad(d.getUTCDate())      + 'T' +
-           _zeroPad(d.getUTCHours())     + ":" +
-           _zeroPad(d.getUTCMinutes())   + ":" +
-           _zeroPad(d.getUTCSeconds())   + 'Z';
-}
-
 function stringify(o, options) {
     if (!options) {
         options = {};
@@ -119,7 +106,7 @@ function stringify(o, options) {
 
             append(']');
         } else if (constr === Date) {
-            append(encodeDate(o));
+            append(o.getTime());
         } else {
             var type = typeof o;
             switch(type)
